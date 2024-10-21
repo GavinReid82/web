@@ -346,7 +346,7 @@ nav {
 
 .contact-form input,
 .contact-form textarea {
-  width: 100%;
+  width: 96%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -354,6 +354,7 @@ nav {
 }
 
 .contact-form input[type="submit"] {
+  width: 100%;
   background-color: #ff4545;
   color: white;
   border: none;
