@@ -20,6 +20,11 @@ body{
 }
 h1{
   color: white;
+  margin-bottom: 20px;
+}
+h2{
+  color: rgb(221, 219, 219);
+  margin-bottom: 20px;
 }
 .homepage-content {
   display: flex;
@@ -179,12 +184,61 @@ nav {
   /* ABOUT
 
   /* About page specific padding to prevent overlap with navbar */
-.about-page .content {
-  padding-top: 70px; /* Push the content down below the navbar */
-  align-items: flex-start; /* Prevent vertical centering on About page */
+/* Styling the main wide text box */
+.about-page-content .about-card {
+  width: 80%;
+  max-width: 1000px;
+  margin: 20px auto;
+  margin-top: 10%;
+  text-align: center;
 }
+}
+@media (max-width: 768px) {
+  .about-page-content {
+    padding: 1em;
+  }
+
+  .about-card, .contact-card {
+    padding: 1em;
+  }
+}
+
+/* Styling the two boxes below */
+.about-page-skills {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px auto;
+  max-width: 1000px;
+}
+
+.about-page-skills .skills-card {
+  width: 48%; /* Two boxes taking half of the available space */
+}
+
+/* Ensure list items inside skills cards are left-aligned */
+.skills-card ul {
+  text-align: left; /* Align the list to the left */
+  padding-left: 20px; /* Add some padding to align with the list bullets */
+}
+
+.skills-card li {
+  margin-bottom: 10px; /* Optional: Add some spacing between list items */
+}
+
+/* Make it responsive */
+@media (max-width: 768px) {
+  .about-page-skills {
+      flex-direction: column;
+  }
+  .about-page-skills .skills-card {
+      width: 100%;
+      margin-bottom: 20px;
+  }
+}
+
+
 .about-card {
-  width: 60% !important; /* Default width based on viewport width */
+  width: 80% !important; /* Default width based on viewport width */
   max-width: 800px; /* Maximum width, so it doesn’t get too large on big screens */
   min-width: 300px; /* Minimum width for smaller screens */
   margin: 20px auto; /* Adjust margin for better spacing */
