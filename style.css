@@ -26,6 +26,10 @@ h2{
   color: rgb(221, 219, 219);
   margin-bottom: 20px;
 }
+.top-space {
+  height: 200px;
+  position: fixed;
+}
 .homepage-content {
   display: flex;
   justify-content: center; /* Center horizontally */
@@ -186,10 +190,11 @@ nav {
   /* About page specific padding to prevent overlap with navbar */
 /* Styling the main wide text box */
 .about-page-content .about-card {
+  background: #252424;
   width: 80%;
-  max-width: 1000px;
-  margin: 20px auto;
-  margin-top: 10%;
+  max-width: 90%;
+  margin: 2em auto;
+  margin-top: 6em;
   text-align: center;
 }
 }
@@ -207,8 +212,9 @@ nav {
 .about-page-skills {
   display: flex;
   justify-content: space-between;
-  margin: 20px auto;
-  max-width: 1000px;
+  margin: 2em auto;
+  margin-bottom: 4em;
+  max-width: 90%;
 }
 
 .about-page-skills .skills-card {
