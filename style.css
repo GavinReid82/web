@@ -17,6 +17,7 @@ body{
   background: #252424;
   color: #a2a5b3;
   align-content: center;
+  padding: 1em;
 }
 h1{
   color: white;
@@ -25,6 +26,9 @@ h1{
 h2{
   color: rgb(221, 219, 219);
   margin-bottom: 20px;
+}
+a{
+  color: rgba(251, 241, 35, 0.86); /* Change to the yellow color for active page */
 }
 .top-space {
   height: 200px;
@@ -137,39 +141,23 @@ nav {
   }
 
 
-  /* Default hamburger icon styling */
-.hamburger {
-  display: none; /* Hidden by default, visible on smaller screens */
-  font-size: 24px;
-  cursor: pointer;
-  padding: 10px;
-}
 
 /* Base styling for nav-list */
 .nav-list {
   display: flex; /* Horizontal on larger screens */
+  justify-content: space-evenly;
+  align-items: center;
 }
 
-/* Mobile-specific styling */
+/* Mobile-specific adjustments (optional) */
 @media (max-width: 768px) {
-  .hamburger {
-    display: block; /* Show hamburger icon on mobile */
-  }
-
   .nav-list {
-    display: none; /* Hide by default on mobile */
-    flex-direction: column; /* Stack items vertically when displayed */
+    flex-direction: column; /* Stack items vertically on smaller screens */
     width: 100%;
-    background-color: #252424;
-    position: absolute;
-    top: 50px;
-    left: 0;
+    padding: 1em 0; /* Add padding for mobile view */
   }
-
   .nav-list li {
-    width: 100%; /* Full width for each item */
-    padding: 1em;
-    text-align: center;
+    padding: 1em; /* Spacing for better tap targets on mobile */
   }
 }
 
@@ -205,7 +193,7 @@ nav {
     box-sizing: border-box; /* Ensure padding is included within the width */
     background-color: #1c1f2b;
     color: #f0f0f0;
-    width: 100%;
+    width: calc(100% - 2em); /* Adjust width to account for 1em margin on each side */
     display: flex;
     align-content: centre;
     justify-content: space-between;
