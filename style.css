@@ -298,7 +298,8 @@ nav {
 }
 
 .card.cvbot-card {
-  width: 520px !important; /* Force width */
+  width: 500px;
+  min-width: 300px !important; /* Force width */
   margin: 150px auto !important; /* Force margin */
   margin-left: 10px !important;
   padding: 2em !important; /* Force padding */
