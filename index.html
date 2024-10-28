@@ -11,14 +11,20 @@
 </head>
 <body>
   <nav id="navbar" class="nav">
-    <ul class="nav-list">
-      <li> <a href="index.html" class="active">Home</a></li>
-      <li> <a href="cv.html">CV_bot</a></li>
-      <li> <a href="projects.html">Projects</a></li>
-      <li> <a href="about.html">About</a></li>
-      <li> <a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+    <!-- Hamburger icon for mobile screens -->
+    <div class="hamburger" onclick="toggleMenu()">
+      &#9776; <!-- Unicode character for a hamburger icon -->
+    </div>
+    
+    <ul class="nav-list" id="nav-list">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="cv.html">CV_bot</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  
  
     <!-- Add a wrapper around the content -->
     <div class="homepage-content">
@@ -36,6 +42,28 @@
     &copy 2024
     </p>
   </footer>
-
+  <script>
+    function toggleMenu() {
+      var navList = document.getElementById("nav-list");
+      
+      // Toggle display between flex (for showing) and none (for hiding)
+      if (navList.style.display === "flex") {
+        navList.style.display = "none";
+      } else {
+        navList.style.display = "flex";
+        navList.style.flexDirection = "column";  // Apply vertical stacking for mobile
+      }
+    }
+  
+    function resetMenuDisplay() {
+      var navList = document.getElementById("nav-list");
+      if (window.innerWidth > 768) {
+        navList.style.display = "";  // Let CSS control the display on larger screens
+        navList.style.flexDirection = "";  // Remove inline flex-direction to allow horizontal layout
+      }
+    }
+  
+    window.addEventListener("resize", resetMenuDisplay);
+  </script>      
 </body>
 </html>

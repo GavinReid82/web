@@ -36,11 +36,13 @@ h2{
   align-items: center; /* Center vertically for homepage */
   min-height: 100vh; /* Full viewport height */
 }
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .homepage-content {
-    padding: 1em;
+    padding: 0.5em;
   }
-
+  .card {
+    width: 90%; /* Ensure cards fit within small screens */
+  }
   .about-card, .contact-card {
     padding: 1em;
   }
@@ -134,12 +136,45 @@ nav {
     color: rgba(251, 241, 35, 0.86); /* Change to the yellow color for active page */
   }
 
-  @media (max-width: 768px) {
-    nav > ul {
-      flex-direction: column;
-      align-items: center;
-    }
-  
+
+  /* Default hamburger icon styling */
+.hamburger {
+  display: none; /* Hidden by default, visible on smaller screens */
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+/* Base styling for nav-list */
+.nav-list {
+  display: flex; /* Horizontal on larger screens */
+}
+
+/* Mobile-specific styling */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block; /* Show hamburger icon on mobile */
+  }
+
+  .nav-list {
+    display: none; /* Hide by default on mobile */
+    flex-direction: column; /* Stack items vertically when displayed */
+    width: 100%;
+    background-color: #252424;
+    position: absolute;
+    top: 50px;
+    left: 0;
+  }
+
+  .nav-list li {
+    width: 100%; /* Full width for each item */
+    padding: 1em;
+    text-align: center;
+  }
+}
+
+
+
     nav {
       position: relative; /* Prevents navbar from overlapping content */
     }
@@ -179,6 +214,13 @@ nav {
     position: fixed;
     bottom: 0; 
   }
+  @media (max-width: 768px) {
+    footer {
+      position: static;
+      padding: 20px 0; /* Increased padding for easier tapping */
+    }
+  }
+  
 
     p {
       margin-bottom: 1em; /* Adjust the value as needed, e.g., 1em, 10px, etc. */
@@ -258,8 +300,9 @@ nav {
 
 /* Homepage card */
 .homepage-card {
-  width: 300px;
-  margin: 150 auto;
+  width: 100%;
+  max-width: 350px;
+  margin: 1em auto;
   padding: 2em;
   background: #1c1f2b;
   text-align: center;
@@ -378,7 +421,13 @@ nav {
   background-color: #ff7878;
 }
 
-
+@media (max-width: 480px) {
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 0.8em;
+  }
+}
 
 
 
