@@ -300,6 +300,10 @@ nav {
   }
 }
 
+/* INDIVIDUAL PROJECT */
+.project-content {
+  margin-top: 4em;
+}
 
 .card {
   margin: 20px;
