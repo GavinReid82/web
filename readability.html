@@ -31,7 +31,7 @@
         async function calculateGrade() {
             const text = document.getElementById('inputText').value;
             try {
-                const response = await fetch('/calculate', {
+                const response = await fetch('https://readability-440910.oa.r.appspot.com', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ text: text })
