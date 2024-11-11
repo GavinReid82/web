@@ -9,6 +9,7 @@ html{
   margin: 0;
 }
 body{
+  font-family: Arial, Helvetica, sans-serif;
   display: flex;
   flex-direction: column;
   min-height: 100vh; /* Ensure the body height fills the viewport */
@@ -103,26 +104,26 @@ nav {
   top: 0;
   left: 0;
   background-color: var(--green);
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.708);
   z-index: 1000; /* Ensure it stays above other content */
   }
   
   nav > ul {
-  display: flex; 
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  align-items: center;
-  padding-inline-start: 0;
-  margin-block: 0;
-  height: 100%;
-  float: right;
+    display: flex; 
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-inline-start: 0;
+    margin-block: 0;
+    height: 100%;
+    float: right;
   }
   
   nav > ul > li {
-  font-family: sans-serif;
-  margin: 0 0.2rem;
-  padding: 0.2rem;
-  display: block;
+    font-family: sans-serif;
+    margin: 0 0.2rem;
+    padding: 0.2rem;
+    display: block;
   }
   
   nav > ul > li > a {
