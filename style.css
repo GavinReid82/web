@@ -184,6 +184,13 @@ nav {
     margin-bottom: 10em;
     }
 
+  #tunes-link {
+    text-align: center;
+    background-color: var(--green);
+    font-size: 40;
+    margin-bottom: 10em;
+    }
+
   footer {
     text-align: center;
     padding: 10px;
