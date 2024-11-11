@@ -174,14 +174,14 @@ nav {
     text-align: center;
     background-color: var(--green);
     font-size: 40;
-    margin: 10px;
+    margin: 2em;
     }
   
   #buddyapp-link {
     text-align: center;
     background-color: var(--green);
     font-size: 40;
-    margin-bottom: 10em;
+    margin-bottom: 2em;
     }
 
   #tunes-link {
